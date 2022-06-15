@@ -1,0 +1,22 @@
+body {
+    background-color:	#1e1e1e;
+    color: #e0e0e0;
+
+}
+
+h1, h2{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Pacifico', cursive;
+    text-decoration: underline;
+}
+
+p{
+}
+
+blockquote{
+    margin:10px;
+}
+
+
+
