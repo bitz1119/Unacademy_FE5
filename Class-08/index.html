@@ -7,6 +7,14 @@
     <title>Document</title>
 
     <style>
+
+        @media screen and (min-width: 400px) and (max-width:600px) {
+            body {
+                background-color: lightgreen;
+            }
+
+        }
+
         h1{
             color: goldenrod;
         }
@@ -51,9 +59,36 @@
             background-color : grey;
         }
 
+        .box {
+            position: absolute;
+            height:100px; 
+            width:100px ; 
+            border-radius:50%;
+            background-color:lightcoral;
+            animation : changeColor;
+            animation-duration : 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes changeColor {
+            from {
+                background-color:blue;
+                left:0;
+            }
+            
+            to{
+                background-color:red;
+                left:50%;
+            }
+        }
+
+
     </style>
 </head>
 <body>
+
+    <div class="box"></div>
     <h1 class="text-theme">Hello</h1>
     <h1>Bittoo</h1>
     <h1 class="green-color">Aggarwal</h1>
