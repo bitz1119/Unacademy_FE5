@@ -1,5 +1,5 @@
 body{
-    background-color:#d3d1d1;
+    background-color:white;
 }
 
 *{
@@ -41,3 +41,12 @@ body{
     background: radial-gradient(circle, rgba(24,24,25,1) 0%, rgba(81,87,88,1) 100%);
     border-radius: 10px;
 }
+
+.category-box:hover{
+    background: rgb(24,24,25);
+    background: linear-gradient(90deg, rgba(24,24,25,1) 0%, rgba(219,227,228,1) 100%); 
+    border: 3px solid grey; 
+}
+
+
+
