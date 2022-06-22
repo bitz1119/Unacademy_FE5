@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding:0px;
+            margin: 0px;
+        }
+
+        .box {
+            height: 400px;
+            width: 400px;
+            background-color: lightgreen;
+            border: 1px solid black;
+        }
+
+        .parent-box{
+            height: 100vh;
+            width: 100vw;
+            background-color:lightcoral;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content:space-between;
+            flex-direction: row;
+            align-items: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="parent-box">
+        <div class="box">1</div>
+        <div class="box" >2</div>
+        <div class="box" >3</div>
+        <div class="box" >4</div>
+        <div class="box" >5</div>
+        <div class="box" >5</div>
+    </div>
+
+</body>
+</html>
