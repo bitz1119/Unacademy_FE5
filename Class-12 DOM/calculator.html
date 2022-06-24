@@ -5,20 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button {
+            height: 30px;
+            width: 30px;
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
     <input type="text" id="input-box">
-    <button onclick="calculate()">Calculate</button>
+    <button onclick="calculate()">🖩</button>
+    <div class="buttons">
+        <button onclick="addDataToInput(1)">1</button>
+        <button onclick="addDataToInput(2)">2</button>
+        <button onclick="addDataToInput(3)">3</button>
+        <button onclick="addDataToInput('+')">+</button>
+        <br>
+        <button onclick="addDataToInput(4)">4</button>
+        <button onclick="addDataToInput(5)">5</button>
+        <button onclick="addDataToInput(6)">6</button>
+        <button onclick="addDataToInput('-')">-</button>
+        <br>
+        <button onclick="addDataToInput(7)">7</button>
+        <button onclick="addDataToInput(8)">8</button>
+        <button onclick="addDataToInput(9)">9</button>
+        <button onclick="addDataToInput('*')">*</button>
+        <br>
+        <button onclick="clearData()">C</button>
+        <button onclick="addDataToInput(0)">0</button>
+        <button onclick="addDataToInput('/')">/</button>
+        <br>
+    </div>
     <h2 id="text"></h2>
 
     <script>
+
+        function clearData() {
+            document.getElementById("input-box").value = "";
+        }
+
+        function addDataToInput(data){
+            inputBox = document.getElementById("input-box");
+            inputBox.value = inputBox.value + data;
+        }
+
         function calculate(){
             // get input-box value 
             let expression = document.getElementById("input-box").value;
-            console.log(expression);
             // eval operation 
             let answer = eval(expression);
-            console.log(expression);
             // display
             document.getElementById("text").innerHTML = answer;
         }
