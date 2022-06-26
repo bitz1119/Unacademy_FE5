@@ -28,7 +28,7 @@ function renderUI(){
     // put all todoArray element in tbody
     tbodyText = "";
     for(let i = 0; i < todoArray.length;i++){
-        tbodyText = tbodyText + `  <tr class="table-active" style="${todoArray[i].isDeleted == true ? "display:none" : ""}">
+        tbodyText = tbodyText + `  <tr class="table-active ${todoArray[i].isDone == true? "table-success":""}" style="${todoArray[i].isDeleted == true ? "display:none" : ""}">
         <td>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" ${todoArray[i].isDone === true ? "checked" :""} onclick="taskDone(${todoArray[i].id})"/>
@@ -49,6 +49,7 @@ function renderUI(){
 
 function taskDone(id){
     todoArray[id].isDone = true;
+    renderUI();
 }
 
 function deleteTodo(id){
