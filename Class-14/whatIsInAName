@@ -1,0 +1,29 @@
+function isPropertyPresent(source,destination){
+    let sourceKeys = Object.keys(source);
+  
+    for(let i in sourceKeys){
+      if(source[sourceKeys[i]] === destination[sourceKeys[i]]){
+        continue;
+      }
+      else{
+        return false;
+      }
+    }
+    return true;
+  }
+  
+  function whatIsInAName(collection, source) {
+    const arr = [];
+    // Only change code below this line
+    for(let i = 0;i < collection.length;i++){
+      if(isPropertyPresent(source,collection[i])){
+        arr.push(collection[i]);
+      }
+    }
+    console.log(arr)
+    // Only change code above this line
+    return arr;
+  
+  }
+  
+  whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
