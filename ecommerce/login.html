@@ -24,18 +24,27 @@
             </div>
           </nav>
     </div>
-
-    <div id="category">
-        <h1 id="category-header">Categories</h1>
-        <div id="all-category">
-            <div id="category-1" class="category-box">Groceries</div>
-            <div id="category-2" class="category-box">Mobile</div>
-            <div id="category-3" class="category-box">Electronics</div>
-            <div id="category-4" class="category-box">Footware</div>
-            <div id="category-5" class="category-box">Fashion</div>
-        </div>
+    <div class="text-center" style="margin-top:50px">
+    <main class="form-signin w-50 m-auto">
+        <form onSubmit="event.preventDefault(); setCredentials()">
+          <img class="mb-4" src="./img/amazon-logo-png-768x632.png" alt="" width="72" height="57">
+          <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <br>
+          <button class="w-100 btn btn-lg btn-primary" id="login-button">Login</button>
+        </form>
+      </main>
     </div>
 </body>
-<script type="text/javascript" src="./js/index.html"></script>
+<script type="text/javascript" src="./js/login.js"></script>
+
 
 </html>
