@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="amount">
+    <input type="text" id="currency" placeholder="add Base Currency">
+    <button type="button" id="button" >Click me!</button>
+
+    <table>
+        <thead>
+            <th>Currency</th>
+            <th>Price in base currency</th>
+            <th>converted Value</th>
+        </thead>
+        <tbody id="table-body">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+<script type="text/javascript">
+    document.getElementById("button").addEventListener("click",fetchCurrencies)
+    function fetchCurrencies() {
+        let amount = document.getElementById("amount").value;
+        let currency = document.getElementById("currency").value;
+        fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
+        .then(res=>res.json())
+        .then(json=>{
+            console.log(json[currency]);
+            let keys = Object.keys(json[currency]);
+            let innerRows = "";
+            for(let i = 0;i<keys.length;i++) {
+                innerRows += getRow(keys[i],json[currency][keys[i]],amount);
+            }
+            document.getElementById("table-body").innerHTML = innerRows;
+
+        })
+    }
+
+    function getRow(currency,price,amount){
+        return `
+        <tr>
+                <td>${currency}</td>
+                <td>${price}</td>
+                <td>${amount*price}</td>
+            </tr>
+        `
+    }
+
+</script>
+
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style>
+        .news-card{
+            margin:"20px";
+        }
+        img{
+            object-fit:contain;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/BBC_News.svg/1200px-BBC_News.svg.png" alt="" width="50" height="50">
+                </a>
+            </div>
+        </nav>
+
+    <div class="row d-flex justify-content-center" style="margin:20px">
+        <div class="col-6">
+            <div class="input-group mb-3">
+            <select class="form-select" id="inputGroupSelect02">
+            <option selected>all</option>
+            <option value="national">national</option>
+            <option value="business">business</option>
+            <option value="sports">sports</option>
+            <option value="world">world</option>
+            <option value="politics">politics</option>
+            <option value="technology">technology</option>
+            <option value="startup">startup</option>
+            <option value="entertainment">entertainment</option>
+            <option value="miscellaneous">miscellaneous</option>
+            <option value="hatke">hatke</option>
+            <option value="science">science</option>
+            <option value="automobile">automobile</option>
+            </select>
+            <button type="button" class="btn  btn-primary" for="inputGroupSelect02" id="select-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+
+            </label>
+        </div>
+        </div>
+    </div>
+
+    <div class="row" id="news">
+        
+    </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="./script.js"></script>
+
+</html>
