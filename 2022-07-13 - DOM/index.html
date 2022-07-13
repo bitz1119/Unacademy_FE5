@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="button" onclick="changeColor()">Click me to change my color</button>
+    <button id="button" onclick="changeMultiColor()">Click me to change my color</button>
 </body>
 
 <script> 
@@ -21,7 +21,16 @@
         else{
             btnElement.style.backgroundColor = "";
         }
+    }
 
+    var counter = 0;
+
+    function changeMultiColor(){
+        let colors = ["white","red","blue","yellow","green","orange"];
+        counter += 1;
+        let newBtnColor = colors[counter%colors.length];
+        let btnElement = document.getElementById("button");
+        btnElement.style.backgroundColor = newBtnColor;
     }
 
 
