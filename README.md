@@ -3,10 +3,10 @@
 Notes for educator
 - Take Notes
 - Pace Slow
-- Explain Explain concept and code
+- Explain concept and then code
 - Dry Run
 - Use English
-- Class PPT
+- Use Class PPT
 
 Notes for Student
 - Attendence
