@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="plus" onclick="plus()">+</button>
+    <span id="text">0</span>
+    <button id="minus" onclick="minus()">-</button>
+</body>
+
+<script type="text/javascript">
+
+    //local storage to store the number
+    var counter = parseInt(localStorage.getItem("counter"));
+    console.log(counter);
+    if(Number.isNaN(counter)) {
+        counter = 0;
+    }
+    console.log(counter);
+
+    document.getElementById("text").innerHTML = counter;
+
+    function plus(){
+        counter = counter + 1;
+        localStorage.setItem("counter",counter);
+        document.getElementById("text").innerHTML = counter;
+    }
+
+    function minus(){
+        counter = counter - 1;
+        localStorage.setItem("counter",counter);
+        document.getElementById("text").innerHTML = counter;
+    }
+
+
+</script>
+
+</html>
