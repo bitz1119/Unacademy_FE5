@@ -1,10 +1,27 @@
-var contests = {};
+var contests = [];
 fetchContests();
 async function fetchContests(){
     let response = await fetch("https://kontests.net/api/v1/all");
     let json = await response.json();
+    contests = json;
     renderContests(json);
 }
+
+// when ever toggle is changed, change the results accordingly
+document.getElementById("flexSwitchCheckChecked").addEventListener("change", ()=>{
+    if(document.getElementById("flexSwitchCheckChecked").checked === true)
+    {renderContests(contests.filter((ele)=>{
+        if(ele.in_24_hours === "Yes"){
+            return true;
+        }
+        return false;
+    }))}
+    else{
+        renderContests(contests);
+    }
+})
+
+
 
 function renderContests(contests){
     let allCards = "";
