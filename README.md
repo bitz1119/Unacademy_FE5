@@ -12,3 +12,10 @@ Notes for Student
 - Attendence
 - Ask Doubts, Raise Concerns
 - Repeat class work
+
+
+
+cd 
+cd <foldername>
+ls
+cd ..
